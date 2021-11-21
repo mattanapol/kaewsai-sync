@@ -1,10 +1,15 @@
 # Basic
 ## Requirements
 - Kubernetes
-## Get start for development
+## Start development
 ```
 kubectl apply -k .\kubernetes\environments\development\
 ```
+## Clean up
+```
+kubectl delete ns kaewsai-sync
+```
+
 # Todo next
 - Setup vault, might be Hashicorp vault
 - Use secret from vault
