@@ -1,3 +1,10 @@
+# Basic
+## Requirements
+- Kubernetes
+## Get start for development
+```
+kubectl apply -k .\kubernetes\environments\development\
+```
 # Todo next
 - Setup vault, might be Hashicorp vault
 - Use secret from vault
