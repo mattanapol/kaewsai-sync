@@ -1,0 +1,8 @@
+bases:
+  - ../../application
+secretGenerator:
+  - name: mongo-secret
+    namespace: kaewsai-sync
+    literals:
+      - mongo-user=kaewsai
+      - mongo-password=Kaewsai123
