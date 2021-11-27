@@ -17,7 +17,7 @@
 				"build"
 			],
 			"dockerBuild": {
-				"tag": "kaewsaisync:dev",
+				"tag": "mattanapol/kaewsai-sync-api:dev",
 				"target": "base",
 				"dockerfile": "${workspaceFolder}/src/Kaewsai.Sync/Kaewsai.Sync.SyncApi/Dockerfile",
 				"context": "${workspaceFolder}",
@@ -34,7 +34,7 @@
 				"build"
 			],
 			"dockerBuild": {
-				"tag": "kaewsaisync:latest",
+				"tag": "mattanapol/kaewsai-sync-api:latest",
 				"dockerfile": "${workspaceFolder}/src/Kaewsai.Sync/Kaewsai.Sync.SyncApi/Dockerfile",
 				"context": "${workspaceFolder}",
 				"pull": true
@@ -51,14 +51,13 @@
 			],
 			"dockerRun": {
                 "ports": [
-                    { "hostPort": 5000, "containerPort": 5000 }
+					{ "hostPort": 5001, "containerPort": 5001 }
                 ],
 				"network": "bridge"
             },
 			"netCore": {
 				"appProject": "${workspaceFolder}/src/Kaewsai.Sync/Kaewsai.Sync.SyncApi/Kaewsai.Sync.SyncApi.csproj",
-				"enableDebugging": true,
-                "configureSsl": true
+				"enableDebugging": true
 			}
 		},
 		{

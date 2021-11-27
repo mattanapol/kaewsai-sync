@@ -1,5 +1,7 @@
 bases:
   - ../../application
+patchesStrategicMerge:
+  - kaewsai-sync-api.yaml
 secretGenerator:
   - name: mongo-secret
     namespace: kaewsai-sync
