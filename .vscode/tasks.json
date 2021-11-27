@@ -2,6 +2,15 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Kaewsai.Sync/Kaewsai.Sync.SyncApi/Kaewsai.Sync.SyncApi.csproj"
+            ]
+        },
+		{
 			"type": "docker-build",
 			"label": "docker-build: debug",
 			"dependsOn": [
@@ -40,10 +49,15 @@
 			"dependsOn": [
 				"docker-build: debug"
 			],
-			"dockerRun": {},
+			"dockerRun": {
+                "ports": [
+                    { "hostPort": 5000, "containerPort": 5000 }
+                ]
+            },
 			"netCore": {
 				"appProject": "${workspaceFolder}/src/Kaewsai.Sync/Kaewsai.Sync.SyncApi/Kaewsai.Sync.SyncApi.csproj",
-				"enableDebugging": true
+				"enableDebugging": true,
+                "configureSsl": true
 			}
 		},
 		{
