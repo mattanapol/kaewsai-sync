@@ -9,11 +9,13 @@
   </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Kaewsai.Sync.SyncApi.Domain\Kaewsai.Sync.SyncApi.Domain.csproj" />
+      <ProjectReference Include="..\Kaewsai.Sync.SyncApi.Persistent\Kaewsai.Sync.SyncApi.Persistent.csproj" />
     </ItemGroup>
 
 </Project>

@@ -13,6 +13,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
 WORKDIR /src
 COPY ["src/Kaewsai.Sync/Kaewsai.Sync.SyncApi/Kaewsai.Sync.SyncApi.csproj", "src/Kaewsai.Sync/Kaewsai.Sync.SyncApi/"]
 COPY ["src/Kaewsai.Sync/Kaewsai.Sync.SyncApi.Domain/Kaewsai.Sync.SyncApi.Domain.csproj", "src/Kaewsai.Sync/Kaewsai.Sync.SyncApi.Domain/"]
+COPY ["src/Kaewsai.Sync/Kaewsai.Sync.SyncApi.Persistent/Kaewsai.Sync.SyncApi.Persistent.csproj", "src/Kaewsai.Sync/Kaewsai.Sync.SyncApi.Persistent/"]
 RUN dotnet restore "src/Kaewsai.Sync/Kaewsai.Sync.SyncApi/Kaewsai.Sync.SyncApi.csproj"
 COPY . .
 WORKDIR "/src/src/Kaewsai.Sync/Kaewsai.Sync.SyncApi"

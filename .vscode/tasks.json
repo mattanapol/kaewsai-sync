@@ -52,7 +52,8 @@
 			"dockerRun": {
                 "ports": [
                     { "hostPort": 5000, "containerPort": 5000 }
-                ]
+                ],
+				"network": "bridge"
             },
 			"netCore": {
 				"appProject": "${workspaceFolder}/src/Kaewsai.Sync/Kaewsai.Sync.SyncApi/Kaewsai.Sync.SyncApi.csproj",
