@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Kaewsai.Sync.SyncApi.Domain.Model.Nominal;
 using Kaewsai.Sync.SyncApi.Domain.Repository;
